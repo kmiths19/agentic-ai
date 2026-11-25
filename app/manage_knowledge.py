@@ -14,7 +14,7 @@ def main() -> None:
     client = create_mongodb_client()
 
     try:
-        client.admin.command("ping")
+        client.get_database("admin").command("ping")
         collection = get_documents_collection(client)
 
         count = save_knowledge_documents(
