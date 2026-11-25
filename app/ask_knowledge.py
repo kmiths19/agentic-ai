@@ -1,9 +1,9 @@
 
 from app.rag import ask_knowledge_base
-
+from app.llm import ask_llm
 
 def main() -> None:
-    print("Hi! I am Ella, your AI knowledge assistant.")
+    print("Hi! I'm Golku, your assistant.")
     print("You can ask me questions in your language.")
     print("Type 'exit' to quit.\n")
 
@@ -24,7 +24,7 @@ def main() -> None:
         try:
             result = ask_knowledge_base(question)
 
-            print(f"\nAssistant: {result['answer']}")
+            print(f"\nGolku: {result['answer']}")
 
             if result["sources"]:
                 print("\nSources:")
